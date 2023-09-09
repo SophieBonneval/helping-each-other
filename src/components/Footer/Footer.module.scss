@@ -1,0 +1,105 @@
+.footer-main__container {
+    padding: $one-and-half-spacing 0;
+    background-color: $greyscale-2;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include media-query(min, $desk-start) {
+        flex-direction: row;
+    }
+
+    h3 {
+        margin-bottom: $half-spacing;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.footer-main__content {
+    display: flex;
+
+    @include media-query(max, $desk-start) {
+        flex-direction: column;
+    }
+}
+
+.footer-main__about {
+    margin-bottom: $one-and-half-spacing;
+    margin-right: 0;
+    flex: 1 1 0;
+
+    @include media-query(min, $desk-start) {
+        margin-bottom: 0;
+        margin-right: $base-spacing * 3;
+    }
+}
+
+.footer-main__columns {
+    display: flex;
+    flex-direction: row;
+
+    > div:not(:last-of-type) {
+        margin-right: $base-spacing * 3;
+    }
+}
+
+.footer-copyright__container {
+    padding: $one-and-half-spacing 0;
+    background-color: $greyscale-1;
+    color: $white;
+}
+
+.footer-copyright__content {
+    display: flex;
+    justify-content: space-between;
+    @include font-size($small-font-size);
+    line-height: 1.2;
+
+    @include media-query(max, $desk-start) {
+        flex-direction: column;
+    }
+
+    p {
+        margin: 0;
+
+        @include media-query(max, $desk-start) {
+            order: 2;
+        }
+
+        span {
+            color: $primary;
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        @include media-query(max, $desk-start) {
+            margin-bottom: $double-spacing;
+
+            &::after {
+                position: absolute;
+                border-top: 1px solid $white;
+                content: '';
+                display: block;
+                width: 100%;
+                bottom: -$base-spacing;
+                height: 1px;
+            }
+        }
+
+        li:not(:last-of-type) {
+            margin-right: $base-spacing;
+        }
+    }
+}

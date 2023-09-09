@@ -1,0 +1,24 @@
+.button {
+    padding: $base-spacing $one-and-half-spacing;
+    cursor: pointer;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    border-radius: 30px;
+    @include font-size($base-font-size);
+    font-weight: 600;
+    line-height: 1.2;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $primary-dk;
+    }
+
+    &.secondary {
+        background-color: $secondary;
+
+        &:hover {
+            background-color: $secondary-dk;
+        }
+    }
+}
