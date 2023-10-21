@@ -1,22 +1,19 @@
-import Page from './components/Page/Page';
-import Button from './components/Button/Button';
 import classes from './App.module.scss';
-import Wrapper from './components/Wrapper/Wrapper';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import AboutUs from './pages/AboutUs/AboutUs';
+import BookClub from './pages/BookClub/BookClub';
+import GardenClub from './pages/GardenClub/GardenClub';
 
 function App() {
   return (
     <div className={classes['container']}>
-      <Page>
-        <Wrapper>
-          <h1>Welcome to Helping Each Other Uttoxeter</h1>
-          <Button ariaLabel={'Hello'} disabled={false}>
-            Button 1
-          </Button>
-          <Button ariaLabel={'Hello2'} disabled={false} variant='secondary'>
-            Button 2
-          </Button>
-        </Wrapper>
-      </Page>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/about' element={<AboutUs />}></Route>
+        <Route path='/book-club' element={<BookClub />}></Route>
+        <Route path='/garden-club' element={<GardenClub />}></Route>
+      </Routes>
     </div>
   );
 }

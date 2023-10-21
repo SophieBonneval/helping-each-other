@@ -6,6 +6,7 @@ import useScreenSize from '../../hooks/useScreenSize';
 import { useState } from 'react';
 import MenuModal from './MenuModal';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const palmStart = 600;
@@ -17,18 +18,26 @@ export function Header() {
       <div className={classes['header-main__container']}>
         <Wrapper>
           <div className={classes['header-main__content']}>
-            <img
-              className={classes['header-main__content-img']}
-              alt='Logo Helping Each Other Uttoxeter'
-              src={logo}
-            ></img>
+            <Link to='/'>
+              <img
+                className={classes['header-main__content-img']}
+                alt='Logo Helping Each Other Uttoxeter'
+                src={logo}
+              ></img>
+            </Link>
             {windowWidth > palmStart ? (
               <>
-                <ul className={classes['header-main__content-menuItems']}>
-                  <li>About Us</li>
-                  <li>Book Club</li>
-                  <li>Garden Club</li>
-                </ul>
+                <nav className={classes['header-main__content-menuItems']}>
+                  <div>
+                    <Link to='/about'>About Us</Link>
+                  </div>
+                  <div>
+                    <Link to='/book-club'>Book Club</Link>
+                  </div>
+                  <div>
+                    <Link to='/garden-club'>Garden Club</Link>
+                  </div>
+                </nav>
                 <Button>Contact us</Button>
               </>
             ) : (
