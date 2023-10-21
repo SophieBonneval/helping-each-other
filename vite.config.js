@@ -18,4 +18,7 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: {
+    include: ['src/styles/_vars.scss'],
+  },
 });

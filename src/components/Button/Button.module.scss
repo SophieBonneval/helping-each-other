@@ -21,4 +21,10 @@
             background-color: $secondary-dk;
         }
     }
+
+    &.reset {
+        background-color: transparent;
+        color: $black;
+        padding: 0;
+    }
 }
