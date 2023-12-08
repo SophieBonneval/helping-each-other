@@ -12,7 +12,7 @@ export function MenuModal({ className, onClose }) {
         <div className={classes['modalHeader']}>
           <Link to='/'>
             <img
-              className={classes['header-main__content-img']}
+              className={classes['headerMain__contentImg']}
               alt='Logo Helping Each Other Uttoxeter'
               src={logo}
             ></img>
@@ -24,6 +24,9 @@ export function MenuModal({ className, onClose }) {
         </div>
         <div className={classes['modalContent']}>
           <ul>
+            <li>
+              <Link to='/weekly-meetup'>Weekly Meetup</Link>
+            </li>
             <li>
               <Link to='/book-club'>Book Club</Link>
             </li>

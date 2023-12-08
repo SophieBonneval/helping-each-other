@@ -10,25 +10,28 @@ import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
 export function Header() {
-  const palmStart = 600;
+  const lapStart = 750;
   const windowWidth = useScreenSize();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header>
-      <div className={classes['header-main__container']}>
+      <div className={classes['headerMain__container']}>
         <Wrapper>
-          <div className={classes['header-main__content']}>
+          <div className={classes['headerMain__content']}>
             <Link to='/'>
               <img
-                className={classes['header-main__content-img']}
+                className={classes['headerMain__contentImg']}
                 alt='Logo Helping Each Other Uttoxeter'
                 src={logo}
               ></img>
             </Link>
-            {windowWidth > palmStart ? (
+            {windowWidth > lapStart ? (
               <>
-                <nav className={classes['header-main__content-menuItems']}>
+                <nav className={classes['headerMain__content-menuItems']}>
+                  <div>
+                    <Link to='/weekly-meetup'>Weekly Meetup</Link>
+                  </div>
                   <div>
                     <Link to='/book-club'>Book Club</Link>
                   </div>
@@ -50,7 +53,7 @@ export function Header() {
               <>
                 <Button
                   variant='reset'
-                  className={classes['header__mobile-menu-btn']}
+                  className={classes['headerMobile__menuBtn']}
                   onClick={() => {
                     setIsMobileMenuOpen(true);
                   }}
