@@ -6,10 +6,10 @@ import { FiFacebook, FiTwitter, FiMail } from 'react-icons/fi';
 export function Footer() {
   return (
     <footer>
-      <div className={classes['footer-main__container']}>
+      <div className={classes['footerMain__container']}>
         <Wrapper>
-          <div className={classes['footer-main__content']}>
-            <div className={classes['footer-main__about']}>
+          <div className={classes['footerMain__content']}>
+            <div className={classes['footerMain__about']}>
               <h2>Helping Each Other Uttoxeter</h2>
               <p>
                 A peer support group for anyone that has emotional or mental
@@ -18,10 +18,13 @@ export function Footer() {
                 Uttoxeter.
               </p>
             </div>
-            <div className={classes['footer-main__columns']}>
-              <div className={classes['footer-main__column']}>
+            <div className={classes['footerMain__columns']}>
+              <div className={classes['footerMain__column']}>
                 <h3>Quick links</h3>
                 <ul>
+                  <li>
+                    <Link to='/weekly-meetup'>Weekly Meetup</Link>
+                  </li>
                   <li>
                     <Link to='/book-club'>Book Club</Link>
                   </li>
@@ -39,15 +42,15 @@ export function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className={classes['footer-main__column']}>
+              <div className={classes['footerMain__column']}>
                 <h3>Contact Info</h3>
-                <div className={classes['footer-main__column-Email']}>
+                <div className={classes['footerMain__column-Email']}>
                   <FiMail size={15} />
                   <a href='mailto:helpingeachotheruttoxeter@gmail.com'>
                     helpingeachotheruttoxeter@gmail.com
                   </a>
                 </div>
-                <ul className={classes['footer-main__column-socialMedias']}>
+                <ul className={classes['footerMain__column-socialMedias']}>
                   <li>
                     <a
                       href='https://www.facebook.com/helpingeachotheruttoxeter'
@@ -67,9 +70,9 @@ export function Footer() {
           </div>
         </Wrapper>
       </div>
-      <div className={classes['footer-copyright__container']}>
+      <div className={classes['footerCopyright__container']}>
         <Wrapper>
-          <div className={classes['footer-copyright__content']}>
+          <div className={classes['footerCopyright__content']}>
             <p>
               Copyright © <span>Helping Each Other</span> all right reserved.
             </p>

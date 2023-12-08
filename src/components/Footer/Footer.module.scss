@@ -1,5 +1,5 @@
-.footer-main__container {
-    padding: $one-and-half-spacing 0;
+.footerMain__container {
+    padding: $one-and-half-spacing * 2 0;
     background-color: $greyscale-2;
     color: $white;
     display: flex;
@@ -19,7 +19,7 @@
             width: 60px;
             height: 2px;
             border-radius: 10px;
-            background-color: $secondary;
+            background-color: $primary;
             margin-top: $half-spacing;            
         }
     }
@@ -33,7 +33,7 @@
             width: 60px;
             height: 2px;
             border-radius: 10px;
-            background-color: $primary;
+            background-color: $secondary;
             margin-top: $half-spacing;            
         }
     }
@@ -45,7 +45,7 @@
     }
 }
 
-.footer-main__content {
+.footerMain__content {
     display: flex;
 
     @include media-query(max, $desk-start) {
@@ -53,7 +53,7 @@
     }
 }
 
-.footer-main__about {
+.footerMain__about {
     margin-bottom: $one-and-half-spacing;
     margin-right: 0;
     flex: 1 1 0;
@@ -64,7 +64,7 @@
     }
 }
 
-.footer-main__columns {
+.footerMain__columns {
     display: flex;
     flex-direction: row;
 
@@ -76,7 +76,7 @@
         margin-right: $base-spacing * 3;
     }
 
-    a, .footer-main__column-Email a {
+    a, .footerMain__column-Email a {
         color: $greyscale-4;
         text-decoration: none;
         transition: color 0.3s ease-in-out;
@@ -87,7 +87,7 @@
     }
 }
 
-.footer-main__column-Email {
+.footerMain__column-Email {
     display: flex;
     align-items: center;
 
@@ -96,19 +96,19 @@
     }
 }
 
-ul.footer-main__column-socialMedias {
+ul.footerMain__column-socialMedias {
     margin-top: $base-spacing;
     display: flex;
     gap: $base-spacing;
 }
 
-.footer-copyright__container {
+.footerCopyright__container {
     padding: $one-and-half-spacing 0;
     background-color: $greyscale-1;
     color: $white;
 }
 
-.footer-copyright__content {
+.footerCopyright__content {
     display: flex;
     justify-content: space-between;
     @include font-size($small-font-size);
