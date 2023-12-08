@@ -1,0 +1,139 @@
+.hompage__bannerImg {
+    background-image: url(../../assets/banner.jpg);
+    background-size: cover;
+    background-position-y: center;
+    height: 400px;
+    width: calc(100% + 2 * $base-spacing);
+    margin: -$base-spacing (-$base-spacing) 0;
+    position: relative;
+    z-index: -1;
+
+    > div {
+        height: 100%;
+        display: flex;
+    }
+
+    h1 {
+        color: $white;
+        margin: auto;
+        padding: 0 $base-spacing;
+        font-size: $h2-font-size;
+
+        @include media-query(min, $desk-start) {
+            font-size: $h1-font-size;
+        }
+    }
+}
+
+.hompage__bannerOverlay {
+    background-color: rgba($black, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.homepage__activitiesContainer {
+    margin: $double-spacing * 1.5 auto;
+
+    h1 {
+       text-align: center;
+    }
+}
+
+.homepage__activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $double-spacing;
+    margin-top: $base-spacing * 2;
+    text-align: left;
+
+    @include media-query(min, $desk-start) {
+        flex-direction: row;
+    }
+}
+
+.homepage__activities-item {
+    h2 {
+        margin-bottom: $half-spacing;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: $half-spacing;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: bold;
+
+        svg {
+            margin-left: $half-spacing;
+        }
+    }
+}
+
+.homepage__activities-item__icon {
+    text-align: center;
+}
+
+.homepage__activities-item:first-child {
+    a {
+        color: $accent-yellow;
+
+        &:hover {
+            color: $accent-yellow-dk;
+
+            svg {
+                color: $accent-yellow-dk;
+            }
+        }
+    }
+
+    svg {
+        color: $accent-yellow;
+    }
+}
+
+.homepage__activities-item:nth-child(2) {
+    a {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-dk;
+
+            svg {
+                color: $primary-dk;
+            }
+        }
+    }
+    svg {
+        color: $primary;
+    }
+}
+
+.homepage__activities-item:last-child {
+    a {
+        color: $secondary;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary-dk;
+
+            svg {
+                color: $secondary-dk;
+            }
+        }
+    }
+
+    svg {
+        color: $secondary;
+    }
+}
+
