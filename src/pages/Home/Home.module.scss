@@ -3,7 +3,7 @@
     background-size: cover;
     background-position-y: center;
     height: 400px;
-    width: calc(100% + 2 * $base-spacing);
+    width: calc(100% + $base-spacing);
     margin: -$base-spacing (-$base-spacing) 0;
     position: relative;
     z-index: -1;
@@ -71,6 +71,7 @@
         align-items: center;
         text-decoration: none;
         font-weight: bold;
+        width: fit-content;
 
         svg {
             margin-left: $half-spacing;

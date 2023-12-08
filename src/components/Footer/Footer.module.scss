@@ -125,8 +125,13 @@ ul.footerMain__column-socialMedias {
             order: 2;
         }
 
-        span {
+        a {
             color: $primary;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary-dk;
+            }
         }
     }
 

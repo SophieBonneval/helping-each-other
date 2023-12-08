@@ -74,7 +74,8 @@ export function Footer() {
         <Wrapper>
           <div className={classes['footerCopyright__content']}>
             <p>
-              Copyright © <span>Helping Each Other</span> all right reserved.
+              Copyright © <Link to='/'>Helping Each Other</Link> all right
+              reserved.
             </p>
             <ul>
               <li>Legal link 1</li>

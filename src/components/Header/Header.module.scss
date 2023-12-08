@@ -17,19 +17,42 @@
 }
 
 .headerMain__content-menuItems {
-    height: fit-content;
-    display: flex;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: fit-content;
+        display: flex;
+    }
 
-    div:not(:last-of-type) {
+    li:not(:last-of-type) {
         margin-right: $base-spacing;
     }
 
     a {
         text-decoration: none;
         color: $black;
+        position: relative;
 
-        &:hover {
-            color: $greyscale-3;
+        &::after {
+            position: absolute;
+            bottom: -$half-spacing;
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            border-radius: 10px;
+            background: $primary-lt;
+            transition: width 0.3s ease-in;
+        }
+
+        &:hover::after{            
+            width: 100%;
+        }
+        
+        &.active::after {
+            width: 100%;
+            background: $primary;
         }
     }
 }
