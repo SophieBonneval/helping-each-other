@@ -8,7 +8,7 @@
     @include font-size($base-font-size);
     font-weight: 600;
     line-height: 1.2;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
         background-color: $primary-dk;

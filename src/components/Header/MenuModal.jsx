@@ -3,6 +3,7 @@ import classes from './Header.module.scss';
 import classnames from 'classnames';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { FiX } from 'react-icons/fi';
 
 export function MenuModal({ className, onClose }) {
   return (
@@ -18,19 +19,25 @@ export function MenuModal({ className, onClose }) {
           </Link>
           <div>Menu</div>
           <Button variant='reset' onClick={onClose}>
-            Close
+            <FiX size={30} />
           </Button>
         </div>
         <div className={classes['modalContent']}>
           <ul>
             <li>
-              <Link to='/about'>About us</Link>
-            </li>
-            <li>
               <Link to='/book-club'>Book Club</Link>
             </li>
             <li>
               <Link to='/garden-club'>Garden Club</Link>
+            </li>
+            <li>
+              <Link to='/events'>Events</Link>
+            </li>
+            <li>
+              <Link to='/about-us'>About us</Link>
+            </li>
+            <li>
+              <Link to='/contact-us'>Contact us</Link>
             </li>
           </ul>
         </div>

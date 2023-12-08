@@ -7,6 +7,7 @@ import { useState } from 'react';
 import MenuModal from './MenuModal';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
+import { FiMenu } from 'react-icons/fi';
 
 export function Header() {
   const palmStart = 600;
@@ -29,16 +30,21 @@ export function Header() {
               <>
                 <nav className={classes['header-main__content-menuItems']}>
                   <div>
-                    <Link to='/about'>About Us</Link>
-                  </div>
-                  <div>
                     <Link to='/book-club'>Book Club</Link>
                   </div>
                   <div>
                     <Link to='/garden-club'>Garden Club</Link>
                   </div>
+                  <div>
+                    <Link to='/events'>Events</Link>
+                  </div>
+                  <div>
+                    <Link to='/about-us'>About Us</Link>
+                  </div>
                 </nav>
-                <Button>Contact us</Button>
+                <Link to='/contact-us'>
+                  <Button>Contact Us</Button>
+                </Link>
               </>
             ) : (
               <>
@@ -49,7 +55,7 @@ export function Header() {
                     setIsMobileMenuOpen(true);
                   }}
                 >
-                  Menu
+                  <FiMenu size={30} />
                 </Button>
                 <MenuModal
                   className={classnames({
