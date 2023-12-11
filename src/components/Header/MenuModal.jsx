@@ -34,6 +34,9 @@ export function MenuModal({ className, onClose }) {
               <Link to='/garden-club'>Garden Club</Link>
             </li>
             <li>
+              <Link to='/swimming-club'>Swimming Club</Link>
+            </li>
+            <li>
               <Link to='/events'>Events</Link>
             </li>
             <li>

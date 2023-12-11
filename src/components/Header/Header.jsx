@@ -70,6 +70,18 @@ export function Header() {
                     <li>
                       <Link
                         className={
+                          location.pathname === '/swimming-club'
+                            ? classes.active
+                            : ''
+                        }
+                        to='/swimming-club'
+                      >
+                        Swimming Club
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={
                           location.pathname === '/events' ? classes.active : ''
                         }
                         to='/events'
