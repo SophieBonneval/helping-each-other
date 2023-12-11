@@ -1,0 +1,55 @@
+.activityPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.activityPage_header {
+    margin: $base-spacing 0 $double-spacing;
+
+    svg {
+        color: $accent-yellow;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        border-radius: $half-spacing;
+        background-color: $accent-yellow;
+        margin: $base-spacing auto;
+    }
+}
+
+.activityPage_content {
+    display: flex;
+    gap: $double-spacing;
+
+    > * {
+        width: 50%;
+        text-align: left;
+    }
+}
+
+.activityPage_content-img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: $base-spacing;
+    margin-bottom: $base-spacing;
+    background-color: black;
+}
+
+.activityPage_content-date {
+    display: flex;
+    margin-bottom: $base-spacing;
+
+    svg {
+        margin-right: $half-spacing;
+        color: $accent-yellow;
+    }
+}

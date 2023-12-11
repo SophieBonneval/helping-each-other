@@ -15,8 +15,7 @@ export function Footer() {
               <p>
                 A peer support group for anyone that has emotional or mental
                 health difficulties. Come and join us for free tea and coffee
-                every Thursday 10am-12pm at the Heath Community Centre,
-                Uttoxeter.
+                every Thursday 10am-12pm at the Uttoxeter Leisure Centre.
               </p>
             </div>
             <div className={classes['footerMain__columns']}>
