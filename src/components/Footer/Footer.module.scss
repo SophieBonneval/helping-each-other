@@ -72,8 +72,16 @@
         margin-bottom: calc($half-spacing / 2);
     }
 
-    > div:not(:last-of-type) {
-        margin-right: $base-spacing * 3;
+    > div {
+        min-width: 140px;
+
+        &:not(:last-of-type) {
+            margin-right: $half-spacing;
+
+            @include media-query(min, $palm-start) {
+                margin-right: $base-spacing * 3;
+            }
+        }
     }
 
     a, .footerMain__column-Email a {
@@ -85,14 +93,29 @@
             color: $greyscale-3;
         }
     }
+
+    .footerMain__column-Email {
+        @include media-query(max, $mob-start) {
+            width: calc(100% - 16px);
+        }
+
+        a {
+            word-break: break-all;
+        }
+
+        svg {
+            min-width: 15px;
+        }
+    }
 }
 
 .footerMain__column-Email {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     svg {
         margin-right: $half-spacing;
+        margin-top: calc($half-spacing / 2);
     }
 }
 
