@@ -23,16 +23,43 @@
         border-radius: $half-spacing;
         background-color: $accent-yellow;
         margin: $base-spacing auto;
+
+        @include media-query(max, $lap-start) {
+            margin: $base-spacing auto 0;
+        }
     }
 }
 
 .activityPage_content {
     display: flex;
-    gap: $double-spacing;
+    flex-direction: column;
+    gap: $base-spacing * 1.5;
 
     > * {
-        width: 50%;
+        width: 100%;
         text-align: left;
+    }
+
+    @include media-query(min, $lap-start) {
+        flex-direction: row;
+        gap: $double-spacing;
+
+        > * {
+            width: 50%;
+        }
+    }
+}
+
+.activityPage_content-date,
+.activityPage_content-location {
+    display: flex;
+    margin-bottom: $half-spacing;
+
+    svg {
+        margin-right: $half-spacing;
+        margin-top: 1px;
+        color: $accent-yellow;
+        min-width: $base-spacing * 1.25;
     }
 }
 
@@ -40,16 +67,30 @@
     height: 300px;
     object-fit: cover;
     border-radius: $base-spacing;
-    margin-bottom: $base-spacing;
     background-color: black;
 }
 
-.activityPage_content-date {
-    display: flex;
-    margin-bottom: $base-spacing;
+.activityPage_separator {
+    margin: $double-spacing 0;
+    padding: 0 $base-spacing;
+    position: relative;
 
-    svg {
-        margin-right: $half-spacing;
-        color: $accent-yellow;
+    &::before,
+    &::after {
+        position: absolute;
+        left: -50%;
+        top: 1px;
+        content: '';
+        display: block;
+        width: 50%;
+        height: 2px;
+        border-radius: $half-spacing;
+        background-color: $accent-yellow;
+        margin: $base-spacing auto;
+    }
+
+    &::after {
+        left: auto;
+        right: -50%;
     }
 }

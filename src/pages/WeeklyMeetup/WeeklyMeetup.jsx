@@ -2,7 +2,7 @@ import Page from '../../components/Page/Page';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import classes from './WeeklyMeetup.module.scss';
 import activities from '../../data/activities';
-import { FiCalendar } from 'react-icons/fi';
+import { FiCalendar, FiMapPin } from 'react-icons/fi';
 
 function WeeklyMeetup() {
   const activity = activities[0];
@@ -20,11 +20,16 @@ function WeeklyMeetup() {
             <div>
               <div className={classes['activityPage_content-date']}>
                 <FiCalendar size={20} />
-                <h4>Every Thursday 10am-12pm</h4>
+                <h4>{activity.when}</h4>
+              </div>
+              <div className={classes['activityPage_content-location']}>
+                <FiMapPin size={20} />
+                <h4>{activity.location}</h4>
               </div>
               <p>{activity.description}</p>
             </div>
           </div>
+          <h2 className={classes['activityPage_separator']}>Next events</h2>
         </div>
       </Wrapper>
     </Page>
