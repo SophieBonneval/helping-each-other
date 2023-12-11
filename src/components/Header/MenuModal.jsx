@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { FiX } from 'react-icons/fi';
+import navItems from '../../data/navItems';
 
 export function MenuModal({ className, onClose }) {
   return (
@@ -24,27 +25,11 @@ export function MenuModal({ className, onClose }) {
         </div>
         <div className={classes['modalContent']}>
           <ul>
-            <li>
-              <Link to='/weekly-meetup'>Weekly Meetup</Link>
-            </li>
-            <li>
-              <Link to='/book-club'>Book Club</Link>
-            </li>
-            <li>
-              <Link to='/garden-club'>Garden Club</Link>
-            </li>
-            <li>
-              <Link to='/swimming-club'>Swimming Club</Link>
-            </li>
-            <li>
-              <Link to='/events'>Events</Link>
-            </li>
-            <li>
-              <Link to='/about-us'>About us</Link>
-            </li>
-            <li>
-              <Link to='/contact-us'>Contact us</Link>
-            </li>
+            {navItems.map((navItem, index) => (
+              <li key={index}>
+                <Link to={navItem.link}>{navItem.title}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

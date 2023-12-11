@@ -2,6 +2,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import classes from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { FiFacebook, FiTwitter, FiMail } from 'react-icons/fi';
+import navItems from '../../data/navItems';
 
 export function Footer() {
   return (
@@ -22,24 +23,11 @@ export function Footer() {
               <div className={classes['footerMain__column']}>
                 <h3>Quick links</h3>
                 <ul>
-                  <li>
-                    <Link to='/weekly-meetup'>Weekly Meetup</Link>
-                  </li>
-                  <li>
-                    <Link to='/book-club'>Book Club</Link>
-                  </li>
-                  <li>
-                    <Link to='/garden-club'>Garden Club</Link>
-                  </li>
-                  <li>
-                    <Link to='/events'>Events</Link>
-                  </li>
-                  <li>
-                    <Link to='/about-us'>About us</Link>
-                  </li>
-                  <li>
-                    <Link to='/contact-us'>Contact Us</Link>
-                  </li>
+                  {navItems.map((quickLink, index) => (
+                    <li key={index}>
+                      <Link to={quickLink.link}>{quickLink.title}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className={classes['footerMain__column']}>

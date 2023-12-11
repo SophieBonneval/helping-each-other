@@ -8,6 +8,7 @@ import MenuModal from './MenuModal';
 import classnames from 'classnames';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
+import navItems from '../../data/navItems';
 
 export function Header() {
   const lapStart = 750;
@@ -31,76 +32,20 @@ export function Header() {
               <>
                 <nav className={classes['headerMain__content-menuItems']}>
                   <ul>
-                    <li>
-                      <Link
-                        className={
-                          location.pathname === '/weekly-meetup'
-                            ? classes.active
-                            : ''
-                        }
-                        to='/weekly-meetup'
-                      >
-                        Weekly Meetup
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          location.pathname === '/book-club'
-                            ? classes.active
-                            : ''
-                        }
-                        to='/book-club'
-                      >
-                        Book Club
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          location.pathname === '/garden-club'
-                            ? classes.active
-                            : ''
-                        }
-                        to='/garden-club'
-                      >
-                        Garden Club
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          location.pathname === '/swimming-club'
-                            ? classes.active
-                            : ''
-                        }
-                        to='/swimming-club'
-                      >
-                        Swimming Club
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          location.pathname === '/events' ? classes.active : ''
-                        }
-                        to='/events'
-                      >
-                        Events
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          location.pathname === '/about-us'
-                            ? classes.active
-                            : ''
-                        }
-                        to='/about-us'
-                      >
-                        About Us
-                      </Link>
-                    </li>
+                    {navItems.slice(0, -1).map((navItem, index) => (
+                      <li key={index}>
+                        <Link
+                          className={
+                            location.pathname === navItem.link
+                              ? classes.active
+                              : ''
+                          }
+                          to={navItem.link}
+                        >
+                          {navItem.title}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </nav>
                 <Link to='/contact-us'>
