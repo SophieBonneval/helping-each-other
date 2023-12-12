@@ -30,6 +30,20 @@ function WeeklyMeetup() {
             </div>
           </div>
           <h2 className={classes['activityPage_separator']}>Next events</h2>
+          <div className={classes['activityPage_events']}>
+            <div className={classes['activityPage_events-item']}>
+              4 <span>Jan</span>
+            </div>
+            <div className={classes['activityPage_events-item']}>
+              11 <span>Jan</span>
+            </div>
+            <div className={classes['activityPage_events-item']}>
+              18 <span>Jan</span>
+            </div>
+            <div className={classes['activityPage_events-item']}>
+              25 <span>Jan</span>
+            </div>
+          </div>
         </div>
       </Wrapper>
     </Page>

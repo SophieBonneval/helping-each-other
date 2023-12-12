@@ -4,12 +4,12 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 0 1rem;
+    padding: $double-spacing 0;
     text-align: center;
 }
 
 .activityPage_header {
-    margin: $base-spacing 0 $double-spacing;
+    margin: 0 0 $double-spacing;
 
     svg {
         color: $accent-yellow;
@@ -92,5 +92,32 @@
     &::after {
         left: auto;
         right: -50%;
+    }
+}
+
+.activityPage_events {
+    display: flex;
+    justify-content: center;
+    gap: $base-spacing;
+    width: 100%;
+}
+
+.activityPage_events-item {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    flex: 1 1 0;
+    border: 2px solid $accent-yellow;
+    border-radius: $base-spacing;
+    height: 100%;
+    padding: 8px;
+    font-size: $h3-font-size;
+    font-weight: bold;
+    max-width: 72px;
+
+    span {
+        font-size: $base-font-size;
+        font-weight: normal;
+        margin-top: -$half-spacing;
     }
 }
