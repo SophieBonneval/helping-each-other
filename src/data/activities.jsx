@@ -39,13 +39,38 @@ const activities = [
   },
   {
     title: 'Book Club',
+    when: '2nd Monday of the month at 10:30am',
+    location: 'Uttoxeter Library',
     description:
       'The book club is on the 2nd Monday of the month at Uttoxeter Library at 10:30. We read a wide range of different authors and genres. We are a very relaxed book club that anyone is welcome to join at any point. There are always spare books at the library for anyone who wishes to join us.',
-    link: '/weekly-meetup',
+    link: '/book-club',
     icon: <PiBooksDuotone size={60} />,
+    dates: [
+      {
+        day: '8',
+        month: 'Jan',
+        year: '2024',
+      },
+      {
+        day: '12',
+        month: 'Feb',
+        year: '2024',
+      },
+      {
+        day: '11',
+        month: 'Mar',
+        year: '2024',
+      },
+      {
+        day: '8',
+        month: 'Apr',
+        year: '2024',
+      },
+    ],
   },
   {
     title: 'Garden Club',
+    location: 'The Heath Community Centre',
     description:
       'We have 2 plots at the Uttoxeter Community Garden, which is attached to The Heath Community Centre. Everyone is welcome to attend and help out with maintaining the plots and adding flowers, fruits, or vegetables. We meet frequently throughout spring, summer, and autumn.',
     link: '/garden-club',
@@ -53,10 +78,34 @@ const activities = [
   },
   {
     title: 'Swimming Club',
+    when: 'Every Monday 10am',
+    location: 'Uttoxeter Leisure Centre',
     description:
-      'Swimming is on every Monday (excluding every 2nd Monday) at Uttoxeter Leisure Centre at 10 am. You will have to sign up to Everyone active and pre book. If you are on means tested benefits or over the age of 67, you are entitled to a reduced rate of swimming. You will need to take proof of entitlement to the desk at Uttoxeter Leisure Centre.',
+      'Swimming is on every Monday (excluding every 2nd Monday) at Uttoxeter Leisure Centre at 10am. You will have to sign up to Everyone active and pre book. If you are on means tested benefits or over the age of 67, you are entitled to a reduced rate of swimming. You will need to take proof of entitlement to the desk at Uttoxeter Leisure Centre.',
     link: '/swimming-club',
     icon: <PiDropDuotone size={60} />,
+    dates: [
+      {
+        day: '1',
+        month: 'Jan',
+        year: '2024',
+      },
+      {
+        day: '8',
+        month: 'Jan',
+        year: '2024',
+      },
+      {
+        day: '15',
+        month: 'Jan',
+        year: '2024',
+      },
+      {
+        day: '22',
+        month: 'Jan',
+        year: '2024',
+      },
+    ],
   },
 ];
 

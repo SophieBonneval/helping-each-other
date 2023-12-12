@@ -4,7 +4,7 @@ import classes from './Wrapper.module.scss';
 export function Wrapper({ classname, children }) {
   return (
     <div
-      className={classnames(classes.container, {
+      className={classnames(classes['container'], {
         [classname]: classname,
       })}
     >

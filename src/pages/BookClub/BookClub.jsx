@@ -1,11 +1,15 @@
 import Page from '../../components/Page/Page';
 import Wrapper from '../../components/Wrapper/Wrapper';
+import activities from '../../data/activities';
+import ActivityDetails from '../../components/ActivityDetails/ActivityDetails';
 
 function BookClub() {
+  const activity = activities[1];
+
   return (
     <Page>
       <Wrapper>
-        <h1>Book Club</h1>
+        <ActivityDetails variant='orange' activity={activity} />
       </Wrapper>
     </Page>
   );

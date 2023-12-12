@@ -2,7 +2,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import classes from './Header.module.scss';
 import Button from '../Button/Button';
 import logo from '../../assets/logo.png';
-import useScreenSize from '../../hooks/useScreenSize';
+import useScreenSize from '../../tools/hooks/useScreenSize';
 import { useState } from 'react';
 import MenuModal from './MenuModal';
 import classnames from 'classnames';
