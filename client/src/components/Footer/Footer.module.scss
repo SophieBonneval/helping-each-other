@@ -85,12 +85,12 @@
     }
 
     a, .footerMain__column-Email a {
-        color: $greyscale-4;
+        color: $greyscale-5;
         text-decoration: none;
         transition: color 0.3s ease-in-out;
 
         &:hover {
-            color: $greyscale-3;
+            color: $greyscale-4;
         }
     }
 
@@ -151,6 +151,7 @@ ul.footerMain__column-socialMedias {
         a {
             color: $primary;
             text-decoration: none;
+            transition: color 0.3s ease-in-out;
 
             &:hover {
                 color: $primary-dk;

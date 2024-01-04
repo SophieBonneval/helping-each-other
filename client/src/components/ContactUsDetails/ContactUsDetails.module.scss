@@ -1,0 +1,43 @@
+.contactUsDetails {
+    padding: $base-spacing * 3 0;
+}
+
+.contactUsDetails_email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+
+    @include media-query(min, $lap-start) {
+        flex-direction: row;
+    }
+
+    a {
+        word-break: break-all;
+        color: $greyscale-2;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $greyscale-3;
+        }
+    }
+}
+
+.contactUsDetails_email_icon {
+    min-width: 42px;
+    min-height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: $half-spacing * 1.5;
+    background-color: $primary;
+
+    svg {
+        color: $white;
+        width: 24px;
+        height: 24px;
+    }
+}

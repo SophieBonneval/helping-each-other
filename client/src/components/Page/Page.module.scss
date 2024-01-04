@@ -1,4 +1,4 @@
-.container {
+.page {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -6,5 +6,8 @@
 
 main {
     flex: 1 1 0;
-    padding: $base-spacing 0;
+
+    &:not(.raw) {
+        padding: $base-spacing 0;
+    }
 }

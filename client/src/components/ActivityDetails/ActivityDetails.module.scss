@@ -16,11 +16,6 @@
                 background-color: $primary;
         }
 
-        .activityDetails_separator::before,
-        .activityDetails_separator::after {
-            background-color: $primary;
-        }
-
         .activityDetails_events-item {
             border: 2px solid $primary;
         }
@@ -138,30 +133,6 @@
     object-fit: cover;
     border-radius: $base-spacing;
     background-color: black;
-}
-
-.activityDetails_separator {
-    margin: $double-spacing 0;
-    padding: 0 $base-spacing;
-    position: relative;
-
-    &::before,
-    &::after {
-        position: absolute;
-        left: -50%;
-        top: 1px;
-        content: '';
-        display: block;
-        width: 50%;
-        height: 2px;
-        border-radius: $half-spacing;
-        margin: $base-spacing auto;
-    }
-
-    &::after {
-        left: auto;
-        right: -50%;
-    }
 }
 
 .activityDetails_events {

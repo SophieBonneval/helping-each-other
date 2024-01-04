@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import classes from './ActivityDetails.module.scss';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
+import Separator from '../Separator/Separator';
 
 export function ActivityDetails({ variant, activity }) {
   return (
@@ -33,7 +34,7 @@ export function ActivityDetails({ variant, activity }) {
       </div>
       {activity.dates && activity.dates.length > 1 && (
         <>
-          <h2 className={classes['activityDetails_separator']}>Next events</h2>
+          <Separator text='Next events' color={variant} />
           <div className={classes['activityDetails_events']}>
             {activity.dates.map((date, index) => (
               <div

@@ -1,0 +1,52 @@
+.separator {
+    margin: $double-spacing auto;
+    padding: 0 $base-spacing;
+    position: relative;
+    width: fit-content;
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 100%;
+        top: 1px;
+        content: '';
+        display: block;
+        width: 80px;
+        height: 2px;
+        border-radius: $half-spacing;
+        margin: $base-spacing auto;
+    }
+
+    &::after {
+        left: auto;
+        right: 100%;
+    }
+
+    &.orange {
+        &::before,
+        &::after {
+            background-color: $primary;
+        }
+    }
+
+    &.green {
+        &::before,
+        &::after {
+            background-color: $secondary;
+        }
+    }
+
+    &.yellow {
+        &::before,
+        &::after {
+            background-color: $accent-yellow;
+        }
+    }
+
+    &.blue {
+        &::before,
+        &::after {
+            background-color: $accent-blue;
+        }
+    }
+}
