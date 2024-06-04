@@ -1,0 +1,42 @@
+name: '(Shared) Build'
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'Build Environment'
+        required: false
+        default: 'prod'
+        type: string
+      node_version:
+        description: 'Node Version'
+        required: false
+        default: '20.x'
+        type: string
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check Out the Repository
+        uses: actions/checkout@v3
+      - name: Use Node.js ${{ inputs.node_version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: 'yarn'
+      #   - name: Setup NPM Auth
+      #     run: npm config set '//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}'
+      - name: Install dependencies
+        run: npm install
+      - name: Build Project
+        run: npm run build:${{ inputs.environment }} --clean
+      - name: Clean Git Data
+        run: rm -rf .git
+      - name: Cache Build Files
+        uses: actions/cache/save@v3
+        if: always()
+        with:
+          path: ./**/*
+          key: ${{ runner.os }}-cache-build-${{ github.run_id }}
