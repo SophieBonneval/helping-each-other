@@ -1,0 +1,79 @@
+name: (Shared) Deploy
+on:
+  workflow_call:
+    inputs:
+      SSH_HOST:
+        description: 'SSH Host'
+        required: true
+        type: string
+      SSH_USER:
+        description: 'SSH User'
+        required: true
+        type: string
+    secrets:
+      SSH_PASSWORD:
+        description: 'SSH Password'
+        required: true
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Cache From Build Workflow
+        id: cache-primes
+        uses: actions/cache/restore@v3
+        with:
+          path: ./**/*
+          key: ${{ runner.os }}-cache-build-${{github.run_id}}
+          fail-on-cache-miss: true
+      - name: List Build Output 1
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents of current directory:"
+          ls -la
+          echo "Contents of cache:"
+          ./**/*
+      - name: Compress Built Files
+        run: tar -czf ../compressed-build-${{github.run_id}}.tar.gz client/dist
+      - name: List Build Output 2
+        run: |
+          echo "Contents of cache:"
+          cd ./**/*
+          echo "Current directory:"
+          pwd
+          echo "Contents of current directory:"
+          ls -la
+      - name: Add new build folder
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ vars.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: mkdir /var/www/helpingeachotheruttoxeter.co.uk/builds/${{ github.run_id}}
+      # - name: Copy compressed file to the server
+      #   uses: appleboy/scp-action@v0.1.7
+      #   with:
+      #     host: ${{ vars.SSH_HOST }}
+      #     username: ${{ vars.SSH_USER }}
+      #     password: ${{ secrets.SSH_PASSWORD }}
+      #     port: 22
+      #     source: '../compressed-build-${{github.run_id}}.tar.gz'
+      #     target: /var/www/helpingeachotheruttoxeter.co.uk/uploads
+      - name: Replace Current Version
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ vars.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: ln -sfn /var/www/helpingeachotheruttoxeter.co.uk/builds/${{ github.run_id}} /var/www/helpingeachotheruttoxeter.co.uk/dist && exit
+      - name: Clean old builds
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ vars.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: cd /var/www/helpingeachotheruttoxeter.co.uk/builds && ls -t | tail -n +4 | xargs rm -rf -- && exit

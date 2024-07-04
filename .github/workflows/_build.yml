@@ -25,13 +25,31 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ inputs.node_version }}
-          cache: 'yarn'
-      #   - name: Setup NPM Auth
-      #     run: npm config set '//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}'
+          cache: 'npm'
+      - name: List Build Output 1
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents of current directory:"
+          ls -la
+          echo "Contents of client directory:"
+          ls -la client
+          echo "Contents of client/dist directory (if it exists):"
+          ls -la client/dist || echo "client/dist directory not found"
       - name: Install dependencies
-        run: npm install
+        run: cd client && npm install
       - name: Build Project
-        run: npm run build:${{ inputs.environment }} --clean
+        run: cd client && npm run build
+      - name: List Build Output 2
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents of current directory:"
+          ls -la
+          echo "Contents of client directory:"
+          ls -la client
+          echo "Contents of client/dist directory (if it exists):"
+          ls -la client/dist || echo "client/dist directory not found"
       - name: Clean Git Data
         run: rm -rf .git
       - name: Cache Build Files
@@ -40,3 +58,11 @@ jobs:
         with:
           path: ./**/*
           key: ${{ runner.os }}-cache-build-${{ github.run_id }}
+      - name: Verify Build Location
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "???"
+          ./**/*
+          echo "Cache key used:"
+          echo "${{ runner.os }}-cache-build-${{ github.run_id }}"
