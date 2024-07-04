@@ -2,12 +2,21 @@
     padding: $base-spacing * 3 0;
 }
 
-.contactUsDetails_email {
+.contactUsDetails_contactContainer {
+    max-width: 340px;
+    margin: auto;
+}
+
+.contactUsDetails_contact {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     max-width: 800px;
     margin: auto;
+
+    &:not(:last-child) {
+        margin-bottom: $base-spacing * 2;
+    }
 
     @include media-query(min, $lap-start) {
         flex-direction: row;
@@ -16,8 +25,10 @@
     a {
         word-break: break-all;
         color: $greyscale-2;
-        text-decoration: none;
+        text-decoration: underline;
+        text-underline-offset: 3px;
         transition: color 0.3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
             color: $greyscale-3;
@@ -25,7 +36,7 @@
     }
 }
 
-.contactUsDetails_email_icon {
+.contactUsDetails_contact_icon {
     min-width: 42px;
     min-height: 42px;
     border-radius: 50%;

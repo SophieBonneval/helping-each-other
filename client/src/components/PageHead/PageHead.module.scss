@@ -1,4 +1,37 @@
-.pageHead {
+.pageHead__activity {
+    margin: 0 0 $double-spacing;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        border-radius: $half-spacing;
+        margin: $base-spacing auto;
+
+        @include media-query(max, $lap-start) {
+            margin: $base-spacing auto 0;
+        }
+    }
+
+    &.orange::after {
+        background-color: $primary;
+    }
+
+    &.green::after {
+        background-color: $secondary;
+    }
+
+    &.yellow::after {
+        background-color: $accent-yellow;
+    }
+
+    &.blue::after {
+        background-color: $accent-blue;
+    }
+}
+
+.pageHead__block {
     height: 200px;
     display: flex;
     flex-direction: column;

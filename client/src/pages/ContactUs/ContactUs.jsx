@@ -6,7 +6,11 @@ import { ContactUsDetails } from '../../components/ContactUsDetails/ContactUsDet
 function ContactUs() {
   return (
     <Page rawmain={true}>
-      <PageHead title='Contact Us' subtitle="We'd love to hear from you!" />
+      <PageHead
+        variant='block'
+        title='Contact Us'
+        subtitle="We'd love to hear from you!"
+      />
       <Wrapper>
         <ContactUsDetails />
       </Wrapper>

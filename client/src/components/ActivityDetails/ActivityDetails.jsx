@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import classes from './ActivityDetails.module.scss';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
 import Separator from '../Separator/Separator';
+import { PageHead } from '../PageHead/PageHead';
 
 export function ActivityDetails({ variant, activity }) {
   return (
@@ -10,10 +11,7 @@ export function ActivityDetails({ variant, activity }) {
         [classes[variant]]: variant,
       })}
     >
-      <div className={classes['activityDetails_header']}>
-        {activity.icon}
-        <h1>{activity.title}</h1>
-      </div>
+      <PageHead variant='activity' activity={activity} colour={variant} />
       <div className={classes['activityDetails_content']}>
         <div className={classes['activityDetails_content-img']}></div>
         <div>
