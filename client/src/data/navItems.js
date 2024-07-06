@@ -1,7 +1,7 @@
 const navItems = [
   {
-    title: 'Weekly Meetup',
-    link: '/weekly-meetup',
+    title: 'Weekly Meetups',
+    link: '/weekly-meetups',
   },
   {
     title: 'Book Club',
@@ -15,10 +15,10 @@ const navItems = [
     title: 'Swimming Club',
     link: '/swimming-club',
   },
-  {
-    title: 'Events',
-    link: '/events',
-  },
+  // {
+  //   title: 'Events',
+  //   link: '/events',
+  // },
   {
     title: 'About us',
     link: '/about-us',

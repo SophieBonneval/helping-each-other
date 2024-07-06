@@ -1,0 +1,43 @@
+.aboutUsDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 32px 0;
+}
+
+.aboutUsDetails_content {
+    line-height: 1.4;
+
+    p:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.aboutUsDetails_team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $double-spacing;
+}
+
+.aboutUsDetails_team-member {
+    text-align: center;
+    width: 160px;
+
+    h4 {
+        margin-top: 2px;
+        font-weight: normal;
+        line-height: 1.2;
+    }
+}
+
+.aboutUsDetails_team-member-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: $black;
+    margin-bottom: $half-spacing;
+}

@@ -3,7 +3,7 @@ import Wrapper from '../../components/Wrapper/Wrapper';
 import activities from '../../data/activities';
 import ActivityDetails from '../../components/ActivityDetails/ActivityDetails';
 
-function WeeklyMeetup() {
+function WeeklyMeetups() {
   const activity = activities[0];
 
   return (
@@ -15,4 +15,4 @@ function WeeklyMeetup() {
   );
 }
 
-export default WeeklyMeetup;
+export default WeeklyMeetups;

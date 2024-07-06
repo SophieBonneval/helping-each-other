@@ -7,12 +7,12 @@ import {
 
 const activities = [
   {
-    title: 'Weekly Meetup',
+    title: 'Weekly Meetups',
     when: 'Every Thursday 10am-12pm',
     location: 'Uttoxeter Leisure Centre',
     description:
       'Our weekly meetup is in partnership with Places of Welcome. This is a group to meet new people and have a friendly chat with a free cup of tea or coffee. It is held at 10 am to 12 pm every Thursday at Uttoxeter Leisure Centre. Everyone is welcome to come along and join us (including children of those attending).',
-    link: '/weekly-meetup',
+    link: '/weekly-meetups',
     icon: <PiCoffeeDuotone size={60} />,
     dates: [
       {
