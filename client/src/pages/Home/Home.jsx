@@ -2,10 +2,16 @@ import { Link } from 'react-router-dom';
 import Page from '../../components/Page/Page';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import classes from './Home.module.scss';
+import classnames from 'classnames';
 import { FiArrowRight } from 'react-icons/fi';
 import activities from '../../data/activities';
+import { useMemo } from 'react';
 
 function Home() {
+  const activitiesFlat = useMemo(() => {
+    return activities.flat();
+  }, []);
+
   return (
     <Page>
       <div className={classes['hompage__bannerImg']}>
@@ -17,8 +23,13 @@ function Home() {
       <Wrapper classname={classes['homepage__activitiesContainer']}>
         <h1>Our activities</h1>
         <div className={classes['homepage__activities']}>
-          {activities.map((activity, index) => (
-            <div key={index} className={classes['homepage__activities-item']}>
+          {activitiesFlat.map((activity, index) => (
+            <div
+              key={index}
+              className={classnames(classes['homepage__activities-item'], {
+                [classes[activity.color]]: activity.color,
+              })}
+            >
               <div className={classes['homepage__activities-item__icon']}>
                 {activity.icon}
               </div>
@@ -29,6 +40,16 @@ function Home() {
               </Link>
             </div>
           ))}
+        </div>
+        <div className={classes['homepage__activities-more']}>
+          Check out our
+          <a
+            href='https://www.facebook.com/helpingeachotheruttoxeter'
+            target='blank'
+          >
+            Facebook
+          </a>
+          page for more updates!
         </div>
       </Wrapper>
     </Page>

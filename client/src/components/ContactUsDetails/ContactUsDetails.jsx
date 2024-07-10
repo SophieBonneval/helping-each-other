@@ -26,7 +26,10 @@ export function ContactUsDetails() {
           </div>
           <div>
             <h3>Message us</h3>
-            <a href='https://www.facebook.com/helpingeachotheruttoxeter'>
+            <a
+              href='https://www.facebook.com/helpingeachotheruttoxeter'
+              target='blank'
+            >
               Helping Each Other - Facebook page
             </a>
           </div>

@@ -15,6 +15,10 @@ const navItems = [
     title: 'Swimming Club',
     link: '/swimming-club',
   },
+  {
+    title: 'Dinner Nights',
+    link: '/dinner-nights',
+  },
   // {
   //   title: 'Events',
   //   link: '/events',

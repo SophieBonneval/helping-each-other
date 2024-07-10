@@ -3,8 +3,8 @@ import Wrapper from '../../components/Wrapper/Wrapper';
 import activities from '../../data/activities';
 import ActivityDetails from '../../components/ActivityDetails/ActivityDetails';
 
-function SwimmingClub() {
-  const activity = activities[3];
+function DinnerNights() {
+  const activity = activities[4];
 
   return (
     <Page>
@@ -15,4 +15,4 @@ function SwimmingClub() {
   );
 }
 
-export default SwimmingClub;
+export default DinnerNights;

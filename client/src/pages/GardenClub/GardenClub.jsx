@@ -9,7 +9,7 @@ function GardenClub() {
   return (
     <Page>
       <Wrapper>
-        <ActivityDetails variant='green' activity={activity} />
+        <ActivityDetails variant={activity.color} activity={activity} />
       </Wrapper>
     </Page>
   );

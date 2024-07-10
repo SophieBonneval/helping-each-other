@@ -13,10 +13,13 @@ $accent-blue-dk: #169CBA;
 $accent-yellow: #ffcf17;
 $accent-yellow-lt: #FFE063;
 $accent-yellow-dk: #CCA712;
+$accent-purple: #594FC2;
+$accent-purple-lt: lighten(#594FC2, 30%);
+$accent-purple-dk: darken(#594FC2, 30%);
 
 $primary-bg: #fff2ec;
 $secondary-bg: #edf9f5;
-$accent-blue-bg: #e7f9fd;
+$accent-blue-bg: #0d1618;
 $accent-yellow-bg: #fffae7;
 
 // Greyscale
@@ -31,11 +34,11 @@ $white: #ffffff;
 
 // Spaces
 $base-spacing: 16px;
-$one-and-half-spacing: ($base-spacing * 1.5);
-$double-spacing: ($base-spacing * 2);
-$two-and-half-spacing: ($base-spacing * 2.5);
-$half-spacing: math.div($base-spacing, 2);
-$small-spacing: math.div($half-spacing, 2);
+$one-and-half-spacing: ($base-spacing * 1.5); // 24px
+$double-spacing: ($base-spacing * 2); // 32px
+$two-and-half-spacing: ($base-spacing * 2.5); // 40px
+$half-spacing: math.div($base-spacing, 2); // 8px
+$small-spacing: math.div($half-spacing, 2); // 4px
 
 // Headings
 $micro-font-size: 12px;

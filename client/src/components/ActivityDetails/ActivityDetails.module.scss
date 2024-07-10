@@ -61,6 +61,21 @@
             border: 2px solid $accent-blue;
         }
     }
+
+    &.purple {
+        svg {
+            color: $accent-purple;
+        }
+
+        .activityDetails_separator::before,
+        .activityDetails_separator::after {
+            background-color: $accent-purple;
+        }
+
+        .activityDetails_events-item {
+            border: 2px solid $accent-purple;
+        }
+    }
 }
 
 .activityDetails_content {
@@ -79,6 +94,24 @@
 
         > * {
             width: 50%;
+        }
+
+        &.inverted {
+            flex-direction: row-reverse;
+    
+            > * {
+                text-align: right;
+            }
+    
+            .activityDetails_content-date,
+            .activityDetails_content-location {
+                flex-direction: row-reverse;
+    
+                svg {
+                    margin-left: $half-spacing;
+                    margin-right: 0;
+                }
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ import { FiCalendar, FiMapPin } from 'react-icons/fi';
 import Separator from '../Separator/Separator';
 import { PageHead } from '../PageHead/PageHead';
 
-export function ActivityDetails({ variant, activity }) {
+export function ActivityDetails({ variant, activity, direction = 'default' }) {
   return (
     <div
       className={classnames(classes['activityDetails'], {
@@ -12,9 +12,13 @@ export function ActivityDetails({ variant, activity }) {
       })}
     >
       <PageHead variant='activity' activity={activity} colour={variant} />
-      <div className={classes['activityDetails_content']}>
+      <div
+        className={classnames(classes['activityDetails_content'], {
+          [classes[direction]]: direction,
+        })}
+      >
         <div className={classes['activityDetails_content-img']}></div>
-        <div>
+        <div className={classes['activityDetails_content-description']}>
           {activity.when && (
             <div className={classes['activityDetails_content-date']}>
               <FiCalendar size={20} />
