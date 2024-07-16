@@ -5,6 +5,7 @@ import {
   PiDropDuotone,
   PiHamburgerDuotone,
 } from 'react-icons/pi';
+import date1Image from '../assets/events/date1.jpg';
 
 const activities = [
   [
@@ -18,11 +19,6 @@ const activities = [
       link: '/weekly-meetups',
       icon: <PiCoffeeDuotone size={60} />,
       dates: [
-        {
-          day: '11',
-          month: 'Jul',
-          year: '2024',
-        },
         {
           day: '18',
           month: 'Jul',
@@ -38,6 +34,11 @@ const activities = [
           month: 'Aug',
           year: '2024',
         },
+        {
+          day: '08',
+          month: 'Aug',
+          year: '2024',
+        },
       ],
     },
     {
@@ -47,6 +48,7 @@ const activities = [
       location: 'Lowes - 44 Carter Street, Uttoxeter',
       description:
         'Our weekly meetup is in partnership with Lowes. This is a group to meet new people and have a friendly chat with a free cup of tea or coffee. It is held at 10 am to 12 pm every Wednesday at Lowes. Everyone is welcome to come along and join us (including children under 2 of those attending). Everything said during the group is completely confidential.',
+      link: '/weekly-meetups',
       icon: <PiCoffeeDuotone size={60} />,
       dates: [
         {
@@ -171,10 +173,10 @@ const activities = [
   {
     color: 'purple',
     title: 'Dinner Nights',
-    when: '1st Friday of the month at 18:00pm',
-    location: 'TBA',
+    // when: '1st Friday of the month at 18:00pm',
+    // location: 'TBA',
     description:
-      'We have monthly meals or activities. Anyone who attends Helping Each Other groups or activities is welcome to attend. The website will be updated monthly with the new venue and date based on recommendations of members. (Helping Each Other is not founding the cost of meals and activities at the moment). Please get in touch if you would like to attend because we need to book in advance.',
+      "We gather once a month to enjoy an evening meal and / or activity together. Anyone who attends Helping Each Other meetup groups or clubs is welcome. The website will be updated monthly with the new venue and date based on our members' recommendations. Helping Each Other is not founding the cost of meals and activities at the moment. Please get in touch if you would like to attend because we need to book in advance.",
     link: '/dinner-nights',
     icon: <PiHamburgerDuotone size={60} />,
     dates: [
@@ -182,21 +184,41 @@ const activities = [
         day: '09',
         month: 'Aug',
         year: '2024',
+        details: {
+          eventType: 'Pub & Restaurant',
+          eventLocation: 'The Roebuck',
+          eventTime: '18:00',
+          eventDescription:
+            "The Roebuck is a warm, welcoming, family friendly pub and restaurant. Just a stone's throw from the A50 and on the border of the beautiful village of Draycott in the Clay. ",
+          eventImgUrl: date1Image,
+
+          eventLocationUrl: 'http://www.theroebuckdraycott.co.uk/',
+          eventInfo: 'http://www.theroebuckdraycott.co.uk/OurMenus',
+        },
       },
       {
         day: '06',
         month: 'Sept',
         year: '2024',
+        details: {
+          eventLocation: 'TBA',
+        },
       },
       {
         day: '04',
         month: 'Oct',
         year: '2024',
+        details: {
+          eventLocation: 'TBA',
+        },
       },
       {
         day: '01',
         month: 'Nov',
         year: '2024',
+        details: {
+          eventLocation: 'TBA',
+        },
       },
     ],
   },

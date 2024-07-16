@@ -18,6 +18,7 @@
         margin: auto;
         padding: 0 $base-spacing;
         font-size: $h2-font-size;
+        text-align: center;
 
         @include media-query(min, $desk-start) {
             font-size: $h1-font-size;

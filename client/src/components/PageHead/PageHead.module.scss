@@ -47,6 +47,10 @@
     &.blue::after {
         background-color: $accent-blue;
     }
+
+    &.purple::after {
+        background-color: $accent-purple;
+    }
 }
 
 .pageHead__block {

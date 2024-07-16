@@ -27,6 +27,13 @@
             background-color: $accent-blue;
         }
     }
+
+    &.purple {
+        &::before,
+        &::after {
+            background-color: $accent-purple;
+        }
+    }
 }
 
 .separator {

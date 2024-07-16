@@ -1,13 +1,14 @@
 import classes from './Separator.module.scss';
 import classnames from 'classnames';
 
-export default function Separator({ text, color = 'orange' }) {
+export default function Separator({ text, color = 'orange', id }) {
   if (!text)
     return (
       <div
         className={classnames(classes['separator'], {
           [classes[color]]: color,
         })}
+        id={id}
       ></div>
     );
   return (
@@ -15,6 +16,7 @@ export default function Separator({ text, color = 'orange' }) {
       className={classnames(classes['separatorWithText'], {
         [classes[color]]: color,
       })}
+      id={id}
     >
       {text}
     </h2>

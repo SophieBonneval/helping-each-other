@@ -12,6 +12,22 @@ function Home() {
     return activities.flat();
   }, []);
 
+  // Find the indexes of the activities that need a hash in the link (to scroll to it on the activity page)
+  const haveHashes = useMemo(() => {
+    const haveHashes = [];
+    let previousColor = '';
+
+    activitiesFlat.forEach((activity, index) => {
+      const currentColor = activity.color;
+      if (previousColor === currentColor) {
+        haveHashes.push(index);
+      }
+      previousColor = currentColor;
+    });
+
+    return haveHashes;
+  }, [activitiesFlat]);
+
   return (
     <Page>
       <div className={classes['hompage__bannerImg']}>
@@ -23,23 +39,28 @@ function Home() {
       <Wrapper classname={classes['homepage__activitiesContainer']}>
         <h1>Our activities</h1>
         <div className={classes['homepage__activities']}>
-          {activitiesFlat.map((activity, index) => (
-            <div
-              key={index}
-              className={classnames(classes['homepage__activities-item'], {
-                [classes[activity.color]]: activity.color,
-              })}
-            >
-              <div className={classes['homepage__activities-item__icon']}>
-                {activity.icon}
+          {activitiesFlat.map((activity, index) => {
+            const slug = activity.title.toLowerCase().replace(/ /g, '-');
+            const hasHash = haveHashes.includes(index);
+
+            return (
+              <div
+                key={index}
+                className={classnames(classes['homepage__activities-item'], {
+                  [classes[activity.color]]: activity.color,
+                })}
+              >
+                <div className={classes['homepage__activities-item__icon']}>
+                  {activity.icon}
+                </div>
+                <h2>{activity.title}</h2>
+                <p>{activity.description}</p>
+                <Link to={`${activity.link}#${hasHash ? slug : ''}`}>
+                  Read more <FiArrowRight />
+                </Link>
               </div>
-              <h2>{activity.title}</h2>
-              <p>{activity.description}</p>
-              <Link to={activity.link}>
-                Read more <FiArrowRight />
-              </Link>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className={classes['homepage__activities-more']}>
           Check out our

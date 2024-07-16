@@ -1,0 +1,167 @@
+.activityDetails_events-itemDetails {
+    display: block;
+    background-color: $greyscale-5;
+    border-radius: 10px;
+    padding: $double-spacing;
+    margin: $two-and-half-spacing auto 0;
+    width: 100%;
+    color: $black;
+    text-decoration: none;
+    text-align: left;
+
+    &:hover, 
+    &:focus,
+    &:active {
+        color: $black;
+        text-decoration: none;
+    }
+
+    @include media-query(min, $lap-start) {
+        width: 420px;
+    }
+
+    &.orange {
+        .activityDetails_events-itemDetails_type {
+            color: $primary;
+        }
+
+        .activityDetails_content-moreDetails {
+            color: $primary;
+
+            &:hover {
+                color: $primary-dk;
+
+                svg {
+                    color: $primary-dk;
+                }
+            }
+        }
+    }
+
+    &.green {
+        .activityDetails_events-itemDetails_type {
+            color: $secondary;
+        }
+
+        .activityDetails_content-moreDetails {
+            color: $secondary;
+
+            &:hover {
+                color: $secondary-dk;
+
+                svg {
+                    color: $secondary-dk;
+                }
+            }
+        }
+    }
+
+    &.yellow {
+        .activityDetails_events-itemDetails_type {
+            color: $accent-yellow;
+        }
+
+        .activityDetails_content-moreDetails {
+            color: $accent-yellow;
+
+            &:hover {
+                color: $accent-yellow-dk;
+
+                svg {
+                    color: $accent-yellow-dk;
+                }
+            }
+        }
+    }
+
+    &.blue {
+        .activityDetails_events-itemDetails_type {
+            color: $accent-blue;
+        }
+
+        .activityDetails_content-moreDetails {
+            color: $accent-blue;
+
+            &:hover {
+                color: $accent-blue-dk;
+
+                svg {
+                    color: $accent-blue-dk;
+                }
+            }
+        }
+    }
+
+    &.purple {
+        .activityDetails_events-itemDetails_type {
+            color: $accent-purple;
+        }
+        
+        .activityDetails_events-itemDetails_bottom-menu {
+            color: $accent-purple;
+
+            &:hover {
+                color: $accent-purple-dk;
+
+                svg {
+                    color: $accent-purple-dk;
+                }
+            }
+        }
+    }
+}
+
+.activityDetails_events-itemDetails_img-container {
+    background-color: black;
+    height: 200px;
+    width: calc(100% + 64px);
+    border-radius: 10px 10px 0 0;
+    margin: -32px -32px 0 -32px;
+
+    img {
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.activityDetails_events-itemDetails_type {
+    margin: $one-and-half-spacing 0 0;
+}
+
+.activityDetails_events-itemDetails_location {
+    font-size: $h3-font-size;
+    font-weight: bold;
+    margin: $half-spacing * 1.5 0 $half-spacing;
+}
+
+.activityDetails_events-itemDetails_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $base-spacing * 1.25;
+}
+
+.activityDetails_events-itemDetails_bottom-time {
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: $small-spacing;
+    }
+}
+
+.activityDetails_events-itemDetails_bottom-menu {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+
+    svg {
+        margin-left: $small-spacing;
+    }
+
+    a {
+        cursor: pointer;
+    }
+}

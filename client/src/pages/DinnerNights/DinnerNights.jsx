@@ -9,7 +9,11 @@ function DinnerNights() {
   return (
     <Page>
       <Wrapper>
-        <ActivityDetails variant={activity.color} activity={activity} />
+        <ActivityDetails
+          variant={activity.color}
+          activity={activity}
+          datesHaveDetails={true}
+        />
       </Wrapper>
     </Page>
   );
