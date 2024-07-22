@@ -6,6 +6,7 @@ import {
   PiHamburgerDuotone,
 } from 'react-icons/pi';
 import date1Image from '../assets/events/date1.jpg';
+import { getNextWeekDays } from '../tools/GetNextDates';
 
 const activities = [
   [
@@ -18,28 +19,13 @@ const activities = [
         'Our weekly meetup is in partnership with Places of Welcome. This is a group to meet new people and have a friendly chat with a free cup of tea or coffee. It is held at 10 am to 12 pm every Thursday at Uttoxeter Leisure Centre. Everyone is welcome to come along and join us (including children of those attending).',
       link: '/weekly-meetups',
       icon: <PiCoffeeDuotone size={60} />,
-      dates: [
-        {
-          day: '18',
-          month: 'Jul',
-          year: '2024',
-        },
-        {
-          day: '25',
-          month: 'Jul',
-          year: '2024',
-        },
-        {
-          day: '01',
-          month: 'Aug',
-          year: '2024',
-        },
-        {
-          day: '08',
-          month: 'Aug',
-          year: '2024',
-        },
-      ],
+      dates: getNextWeekDays('Thursday', 4).map((date) => {
+        return {
+          day: date.getDate(),
+          month: date.toLocaleString('default', { month: 'short' }),
+          year: date.getFullYear(),
+        };
+      }),
     },
     {
       color: 'yellow',
@@ -50,28 +36,13 @@ const activities = [
         'Our weekly meetup is in partnership with Lowes. This is a group to meet new people and have a friendly chat with a free cup of tea or coffee. It is held at 10 am to 12 pm every Wednesday at Lowes. Everyone is welcome to come along and join us (including children under 2 of those attending). Everything said during the group is completely confidential.',
       link: '/weekly-meetups',
       icon: <PiCoffeeDuotone size={60} />,
-      dates: [
-        {
-          day: '17',
-          month: 'Jul',
-          year: '2024',
-        },
-        {
-          day: '24',
-          month: 'Jul',
-          year: '2024',
-        },
-        {
-          day: '31',
-          month: 'Jul',
-          year: '2024',
-        },
-        {
-          day: '07',
-          month: 'Aug',
-          year: '2024',
-        },
-      ],
+      dates: getNextWeekDays('Wednesday', 4).map((date) => {
+        return {
+          day: date.getDate(),
+          month: date.toLocaleString('default', { month: 'short' }),
+          year: date.getFullYear(),
+        };
+      }),
     },
   ],
   {
