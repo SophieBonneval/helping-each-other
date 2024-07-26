@@ -2,7 +2,7 @@ import classes from './EventCard.module.scss';
 import classnames from 'classnames';
 import { FiClock, FiArrowRight } from 'react-icons/fi';
 
-export function EventCard({ activity, activeDate }) {
+function EventCard({ activity, activeDate }) {
   return (
     <div
       className={classnames(classes['activityDetails_events-itemDetails'], {
@@ -61,3 +61,5 @@ export function EventCard({ activity, activeDate }) {
     </div>
   );
 }
+
+export default EventCard;

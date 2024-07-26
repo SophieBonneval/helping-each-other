@@ -1,7 +1,7 @@
 import classes from './Separator.module.scss';
 import classnames from 'classnames';
 
-export default function Separator({ text, color = 'orange', id }) {
+function Separator({ text, color = 'orange', id }) {
   if (!text)
     return (
       <div
@@ -22,3 +22,5 @@ export default function Separator({ text, color = 'orange', id }) {
     </h2>
   );
 }
+
+export default Separator;

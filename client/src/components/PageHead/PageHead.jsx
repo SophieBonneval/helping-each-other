@@ -1,13 +1,7 @@
 import classes from './PageHead.module.scss';
 import classnames from 'classnames';
 
-export function PageHead({
-  variant,
-  subtitle,
-  title,
-  activity,
-  colour = 'orange',
-}) {
+function PageHead({ variant, subtitle, title, activity, colour = 'orange' }) {
   if (variant === 'default') {
     return (
       <div className={classes['pageHead__default']}>
@@ -34,3 +28,5 @@ export function PageHead({
     );
   }
 }
+
+export default PageHead;

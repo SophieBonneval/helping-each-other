@@ -4,7 +4,7 @@ import { FaFacebookF } from 'react-icons/fa6';
 import Separator from '../Separator/Separator';
 // import ContactForm from '../ContactForm/ContactForm';
 
-export function ContactUsDetails() {
+function ContactUsDetails() {
   return (
     <div className={classes['contactUsDetails']}>
       <div className={classes['contactUsDetails_contactContainer']}>
@@ -39,3 +39,5 @@ export function ContactUsDetails() {
     </div>
   );
 }
+
+export default ContactUsDetails;

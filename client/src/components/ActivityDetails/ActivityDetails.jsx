@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom';
 import classnames from 'classnames';
 import classes from './ActivityDetails.module.scss';
 import Separator from '../Separator/Separator';
-import { EventCard } from '../EventCard/EventCard';
-import { PageHead } from '../PageHead/PageHead';
+import EventCard from '../EventCard/EventCard';
+import PageHead from '../PageHead/PageHead';
 import { FiCalendar, FiMapPin, FiArrowDown } from 'react-icons/fi';
 import { BiSolidDownArrow } from 'react-icons/bi';
 
-export function ActivityDetails({
+function ActivityDetails({
   variant,
   activity,
   direction = 'default',

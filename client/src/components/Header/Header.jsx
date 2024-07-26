@@ -1,4 +1,4 @@
-import { Wrapper } from '../Wrapper/Wrapper';
+import Wrapper from '../Wrapper/Wrapper';
 import classes from './Header.module.scss';
 import Button from '../Button/Button';
 import logo from '../../assets/logo.png';
@@ -10,7 +10,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 import navItems from '../../data/navItems';
 
-export function Header() {
+function Header() {
   const lapStart = 750;
   const windowWidth = useScreenSize();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,8 +1,8 @@
 import classes from './AboutUsDetails.module.scss';
-import { PageHead } from '../PageHead/PageHead';
+import PageHead from '../PageHead/PageHead';
 import Separator from '../Separator/Separator';
 
-export function AboutUsDetails({ title, team }) {
+function AboutUsDetails({ title, team }) {
   return (
     <div className={classes['aboutUsDetails']}>
       <PageHead variant='default' title={title} />

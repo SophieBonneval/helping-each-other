@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import classes from './Button.module.scss';
 
-export function Button({
+function Button({
   className,
   children,
   variant,

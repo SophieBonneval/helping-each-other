@@ -1,7 +1,7 @@
 import Page from '../../components/Page/Page';
 import Wrapper from '../../components/Wrapper/Wrapper';
-import { PageHead } from '../../components/PageHead/PageHead';
-import { ContactUsDetails } from '../../components/ContactUsDetails/ContactUsDetails';
+import PageHead from '../../components/PageHead/PageHead';
+import ContactUsDetails from '../../components/ContactUsDetails/ContactUsDetails';
 
 function ContactUs() {
   return (

@@ -1,10 +1,10 @@
-import { Wrapper } from '../Wrapper/Wrapper';
+import Wrapper from '../Wrapper/Wrapper';
 import classes from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { FiFacebook, FiTwitter, FiMail } from 'react-icons/fi';
 import navItems from '../../data/navItems';
 
-export function Footer() {
+function Footer() {
   return (
     <footer>
       <div className={classes['footerMain__container']}>

@@ -1,9 +1,9 @@
 import classes from './Page.module.scss';
-import { Footer } from '../Footer/Footer';
-import { Header } from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import classNames from 'classnames';
 
-export function Page({ rawmain, children }) {
+function Page({ rawmain, children }) {
   return (
     <div className={classes['page']}>
       <Header />
