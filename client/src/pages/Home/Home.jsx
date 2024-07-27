@@ -68,9 +68,9 @@ function Home() {
             href='https://www.facebook.com/helpingeachotheruttoxeter'
             target='blank'
           >
-            Facebook
+            Facebook page
           </a>
-          page for more updates!
+          for more updates!
         </div>
       </Wrapper>
     </Page>
