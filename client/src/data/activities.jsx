@@ -6,7 +6,10 @@ import {
   PiHamburgerDuotone,
 } from 'react-icons/pi';
 import date1Image from '../assets/events/date1.jpg';
-import { getNextWeekDays } from '../tools/GetNextDates';
+import {
+  getNextWeekDays,
+  getNextSecondDayOfMonth,
+} from '../tools/GetNextDates';
 
 const activities = [
   [
@@ -54,28 +57,13 @@ const activities = [
       'The book club is on the 2nd Monday of the month at Uttoxeter Library at 10:30. We read a wide range of different authors and genres. We are a very relaxed book club that anyone is welcome to join at any point. There are always spare books at the library for anyone who wishes to join us.',
     link: '/book-club',
     icon: <PiBooksDuotone size={60} />,
-    dates: [
-      {
-        day: '12',
-        month: 'Aug',
-        year: '2024',
-      },
-      {
-        day: '09',
-        month: 'Sept',
-        year: '2024',
-      },
-      {
-        day: '14',
-        month: 'Oct',
-        year: '2024',
-      },
-      {
-        day: '11',
-        month: 'Nov',
-        year: '2024',
-      },
-    ],
+    dates: getNextSecondDayOfMonth('Monday', 4).map((date) => {
+      return {
+        day: date.getDate(),
+        month: date.toLocaleString('default', { month: 'short' }),
+        year: date.getFullYear(),
+      };
+    }),
   },
   {
     color: 'green',
