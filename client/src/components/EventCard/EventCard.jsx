@@ -46,16 +46,18 @@ function EventCard({ activity, activeDate }) {
             <FiClock size={20} />
             {activity.dates[activeDate].details.eventTime}
           </div>
-          <a
-            href={activity.dates[activeDate].details.eventInfo}
-            target='blank'
-            className={
-              classes['activityDetails_events-itemDetails_bottom-menu']
-            }
-          >
-            See menu
-            <FiArrowRight size={20} />
-          </a>
+          {activity.dates[activeDate].details.eventInfo && (
+            <a
+              href={activity.dates[activeDate].details.eventInfo}
+              target='blank'
+              className={
+                classes['activityDetails_events-itemDetails_bottom-menu']
+              }
+            >
+              See menu
+              <FiArrowRight size={20} />
+            </a>
+          )}
         </div>
       )}
     </div>

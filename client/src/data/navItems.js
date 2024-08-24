@@ -19,10 +19,6 @@ const navItems = [
     title: 'Dinner Nights',
     link: '/dinner-nights',
   },
-  // {
-  //   title: 'Events',
-  //   link: '/events',
-  // },
   {
     title: 'About us',
     link: '/about-us',

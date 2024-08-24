@@ -6,6 +6,7 @@ import {
   PiHamburgerDuotone,
 } from 'react-icons/pi';
 import date1Image from '../assets/events/date1.jpg';
+import date2Image from '../assets/events/date2.jpg';
 import {
   getNextWeekDays,
   getNextSecondDayOfMonth,
@@ -76,12 +77,7 @@ const activities = [
     icon: <PiLeafDuotone size={60} />,
     dates: [
       {
-        day: '10',
-        month: 'Aug',
-        year: '2024',
-      },
-      {
-        day: '24',
+        day: '31',
         month: 'Aug',
         year: '2024',
       },
@@ -93,6 +89,11 @@ const activities = [
       {
         day: '21',
         month: 'Sept',
+        year: '2024',
+      },
+      {
+        day: '05',
+        month: 'Oct',
         year: '2024',
       },
     ],
@@ -140,35 +141,34 @@ const activities = [
     icon: <PiHamburgerDuotone size={60} />,
     dates: [
       {
-        day: '09',
-        month: 'Aug',
-        year: '2024',
-        details: {
-          eventType: 'Pub & Restaurant',
-          eventLocation: 'The Roebuck',
-          eventTime: '18:00',
-          eventDescription:
-            "The Roebuck is a warm, welcoming, family friendly pub and restaurant. Just a stone's throw from the A50 and on the border of the beautiful village of Draycott in the Clay. ",
-          eventImgUrl: date1Image,
-
-          eventLocationUrl: 'http://www.theroebuckdraycott.co.uk/',
-          eventInfo: 'http://www.theroebuckdraycott.co.uk/OurMenus',
-        },
-      },
-      {
         day: '06',
         month: 'Sept',
         year: '2024',
         details: {
-          eventLocation: 'TBA',
+          eventType: 'Bowling',
+          eventLocation: 'Cinebowl',
+          eventTime: '18:00',
+          eventDescription:
+            "Come have fun with us at the Cinebowl, with its 8 lanes of ten pin bowling with glow lighting. With or without food, it's a great way to socialise!",
+          eventImgUrl: date1Image,
+          eventLocationUrl: 'https://www.cinebowl.co.uk/bowling',
+          eventInfo:
+            'https://cinebowl-uttoxeter.square.site/s/order?location=11ee6c0c8d70206d964c3cecef6dbab4&seat_select=true#most-popular',
         },
       },
       {
-        day: '04',
+        day: '11',
         month: 'Oct',
         year: '2024',
         details: {
-          eventLocation: 'TBA',
+          eventType: 'Pub & Restaurant',
+          eventLocation: 'The Red Lion',
+          eventTime: '18:00',
+          eventDescription:
+            "A welcoming and friendly three room traditional drinker's pub. Main bar has flagged floor and wooden panelling, There is a comfortable snug.",
+          eventImgUrl: date2Image,
+          eventLocationUrl: 'https://www.facebook.com/RocesterGeorgeLisa',
+          eventInfo: 'https://restaurantguru.com/Red-Lion-Uttoxeter/menu',
         },
       },
       {
